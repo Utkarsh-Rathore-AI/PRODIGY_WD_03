@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Step 1: Welcome Screen -->
+  <div id="welcome-screen" class="screen active">
+    <h1 class="neon-text">Welcome to Tic Tac Toe</h1>
+    <button onclick="showPlayerSelect()">Start</button>
+  </div>
+
+  <!-- Step 2: Player Selection -->
+  <div id="player-select" class="screen">
+    <h2 class="neon-text">How Many Players?</h2>
+    <button onclick="startGame(1)">1 Player</button>
+    <button onclick="startGame(2)">2 Players</button>
+  </div>
+
+  <!-- Step 3: Game -->
+  <div id="game" class="screen">
+    <h1 class="neon-text" id="turn-text">Player X's Turn</h1>
+    <div class="board" id="board">
+      <!-- Cells generated dynamically -->
+    </div>
+    <div class="button-group">
+      <button onclick="resetGame()">Restart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at center, #1a0033, #000000);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.neon-text {
+  color: #fff;
+  text-align: center;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+}
+
+button {
+  background-color: #111;
+  color: #ff00ff;
+  border: 2px solid #ff00ff;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #ff00ff;
+  color: #000;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 15px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #111;
+  border: 2px solid #ff00ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 15px #00ffff,
+    0 0 25px #00ffff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+}
+
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.button-group {
+  margin-top: 20px;
+}
